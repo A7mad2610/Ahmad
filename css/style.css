@@ -1,0 +1,955 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap'); */
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        scale: 0;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes home{
+    from{
+        scale: 0;
+        opacity: 0;
+    }
+
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+:root{
+    /* --primarycolor:#e31616; */
+    --primarycolor:#59ff27;
+    --secondarycolor:#bcf7c5;
+    --lightcolor:#ffffff;
+    --bgcolor1:#171a1c;
+    --bgcolor2:#22282a;
+    --padding:8%;
+}
+::-webkit-scrollbar{
+    width:10px;
+    background:#ffffffb1;   
+}
+::-webkit-scrollbar-thumb{
+    width:10px;
+    background: var(--primarycolor);
+    border-radius: 100px 0 0 100px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+html{
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 16px;
+    color: var(--lightcolor);
+}
+h2{
+    font-size: 1.5rem;
+    letter-spacing: 0.12rem;
+    cursor: pointer;
+}
+h5{
+    font-size: 1.17rem;
+    margin-bottom: 1.5rem;
+}
+p{
+    color: var(--secondarycolor);
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+}
+h1{
+    font-size: 2.95rem;
+    margin: 1.7rem 0;
+}
+h3{
+    font-size: 1.2rem;
+    margin-bottom: 3.5rem;
+}
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+    color: var(--secondarycolor);
+}
+span{
+    color: var(--primarycolor);
+}
+/* -----------------------------------------------------------------------*/
+/* -----------------------------HOME SECTION------------------------------*/
+/* -----------------------------------------------------------------------*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgcolor1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+nav{
+    padding-top: 1.5rem;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    overflow: hidden;
+    animation: home 1s ease  ;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0.8rem 1.5rem;
+    animation: home 1s ease  ;
+}
+nav ul li a{
+    color: var(--lightcolor);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+    animation: home 1s ease  ;
+}
+nav ul li a:hover{
+    color: var(--primarycolor);
+}
+.btn{
+    background-color: var(--primarycolor);
+    color: var(--lightcolor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.71rem 1.77rem;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+    animation: home 1s ease  ;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--primarycolor);
+}
+/* .conbtn{
+    background-color: var(--primarycolor);
+    color: var(--lightcolor);
+    text-decoration: none;
+    font-weight: bold;
+    padding:olor: transparent;
+    border: 1px solid var(--primarycolor);
+} */
+.content{
+    /* width: 100%; */
+    flex-grow: 1;
+    padding: 0 var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: home 1s ease  ;
+}
+.contatiner-texts{
+    position: relative;
+    bottom: 30px;
+    animation: home 1s ease  ;
+}
+
+.social{
+    margin-top: 2rem ;
+}
+.social .fa-brands{
+    font-size: 20px;
+    color: #fff;
+    border-radius: 30px;
+    background-color: transparent ;
+    text-align: center;
+    width: 40px;
+    padding: 10px 0;
+    margin:5px ;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    animation: home 1s ease  ;
+}
+.social .fa-brands:hover{
+    background-color: var(--primarycolor);
+}
+/* .social a{
+    text-decoration: none;
+} */
+/* .social img{
+    margin-right: 2rem;
+    width: 2.5rem;
+    height:2.5rem ;
+    transition: all 0.4s ease;
+} */
+/* .social img:hover{
+    transform: scale(1.2);
+} */
+.home .container-images{
+    width: 45%;
+    height: 90%;
+    position: relative;
+    align-self: flex-end;
+    overflow: hidden;
+    animation: home 1s ease  ;
+}
+.home .container-images img{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    transition: bottom 1s, left 1s;
+}
+.home .container-images img:hover{
+    bottom: 40px;
+}
+/* .home .container-images:hover .mypic{
+    left: 45px;
+} */
+/* -----------------------------------------------------------------------*/
+/* -----------------------------ABOUT SECTION------------------------------*/
+/* -----------------------------------------------------------------------*/
+.About{
+    /* width: 100%; */
+    background-color: var(--bgcolor2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.About .container-images{
+    width: 35%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.About .container-images img{
+    width: 90%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.About .container-texts{
+    width: 35%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+
+
+
+/* -----------------------------------------------------------------------*/
+/* -----------------------------portfolio SECTION------------------------------*/
+/* -----------------------------------------------------------------------*/
+.portfolio{
+    /* width: 100%; */
+    background-color: var(--bgcolor1);
+    padding: 2rem var(--padding);
+}
+.text-center{
+    text-align: center;
+}
+.portfolio .box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.portfolio .card .image{
+    width: 100%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.portfolio .card .txt{
+    width: 100%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.portfolio .card .txt h1{
+    color: var(--lightcolor);
+    font-size: 2.5rem;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;   
+
+}
+.portfolio .card .txt a{
+    color: var(--primarycolor);
+    text-decoration: none;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.portfolio .card .txt i{
+    color: var(--primarycolor);
+    font-size: 1rem;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.portfolio .card{
+    width: 480px;
+    background-color: var(--bgcolor2);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.portfolio .card img{
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------*/
+/* -----------------------------SERVICES SECTION------------------------------*/
+/* -----------------------------------------------------------------------*/
+.services{
+    /* width: 100%; */
+    background-color: var(--bgcolor2);
+    padding: 2rem var(--padding);
+}
+.text-center{
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 240px;
+    background-color: var(--bgcolor1);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ; 
+
+}
+.card i{
+    font-size: 3.12rem;
+    color: var(--primarycolor);
+    margin-bottom: 2rem;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+/* -----------------------------------------------------------------------*/
+/* -----------------------------HOME SKILLS------------------------------*/
+/* -----------------------------------------------------------------------*/
+.Skills{
+    /* width: 100%; */
+    background-color: var(--bgcolor1);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Skills .container-images{
+    width: 35%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+
+}
+.Skills .container-images img{
+    width: 90%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;   
+
+}
+.Skills .container-Skills{
+    width: 50%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.content-Skills{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;   
+
+}
+.Skill{
+    width: 100px;
+    height: 100px;
+    background-color: var(--lightcolor);
+    border-radius: 50%;
+    margin: 0 2rem 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+}
+.Skill img{
+    width: 90%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;   
+}
+/* -----------------------------------------------------------------------*/
+/* -----------------------------Contact SECTION------------------------------*/
+/* -----------------------------------------------------------------------*/
+.Contact{
+    /* width: 100%; */
+    background-color: var(--bgcolor2);
+    padding: 2rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Contact .container-images{
+    width: 35%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+
+}
+.Contact .container-images img{
+    width: 90%;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+    animation: home 1s ease  ;
+}
+.Contact .container-inputs{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+}
+.Contact .container-inputs input ,textarea {
+    width: 90%;
+    height: 45px;
+    border-radius: 0px;
+    margin: 1rem 0;
+    padding: .5rem;
+    border: solid 2px var(--primarycolor);
+    color: var(--lightcolor);
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    background-color:transparent;
+    transition: all .4s ease;
+    animation: transitionIn 5s ease  ;
+    animation-timeline: view() ;
+    animation-range: entry 0% cover 20% ;  
+}
+.Contact .container-inputs input:hover , textarea:hover{
+    scale: 1.1;
+}
+.Contact .container-inputs button{
+    width: 90%;
+    height: 45px;
+    border-radius: 30px;
+    margin: 1rem 0;
+    padding: .5rem;
+    outline: none;
+    font-size: 1.3rem;
+
+}
+
+/* -----------------------------------------------------------------------*/
+/* -----------------------------FOOTER------------------------------*/
+/* -----------------------------------------------------------------------*/
+footer{
+    /* width: 100%; */
+    padding: 2rem var(--padding);
+    background-color: var(--bgcolor1);
+}
+footer .content-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .content-footer p{
+    color: var(--lightcolor);
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+footer .content-footer .end{
+    color: var(--lightcolor);
+    margin-top: 1rem;
+}
+.is-active{
+    display: block;
+}
+/* -----------------------------------------------------------------------*/
+/* -----------------------------HUMBERGER MENU------------------------------*/
+/* -----------------------------------------------------------------------*/
+#menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightcolor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+
+
+/* -----------------------------------------------------------------------*/
+/* -----------------------------MEDIA QUERIES------------------------------*/
+/* -----------------------------------------------------------------------*/
+@media screen and (max-width: 575px) {
+    :root{
+        --padding:1.5rem;
+    }
+    html{
+        font-size: 13px; 
+    }
+    .home{
+        position: relative;
+        overflow: hidden;
+    }
+    .home .container-images{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+        overflow: hidden;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul .is-active{
+        display: block;
+    }
+    nav ul li , .conbtn{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .contatiner-texts {
+        position: relative;
+        bottom: 0px;
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-top: 70px;
+    }
+    #menu{
+        display: block;
+    }
+    .About .container-images{
+        display: none;
+    }
+    .About .container-texts{
+        width: 100%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .portfolio .card{
+        width: 100%;
+    }
+    .Skills .container-images{
+        display: none;
+    }
+    .Skills .container-Skills {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .content-Skills {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .Contact .container-images {
+        display: none;
+    }
+    .Contact .container-inputs {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:767px) {
+    :root{
+        --padding:1.5rem;
+    }
+    html{
+        font-size: 13px; 
+    }
+    .home{
+        position: relative;
+        overflow: hidden;
+    }
+    .home .container-images{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+        overflow: hidden;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul .is-active{
+        display: block;
+    }
+    nav ul li , .conbtn{
+        display: block;
+        text-align: center;
+        margin: 40px;
+    }
+    .contatiner-texts {
+        position: relative;
+        bottom: -50px;
+    }
+    .social{
+        margin-top: 30px;
+    }
+    h3{
+        margin-top: 30px;
+    }
+    #menu{
+        display: block;
+    }
+    .About .container-images{
+        display: none;
+    }
+    .About .container-texts{
+        width: 100%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .portfolio .card{
+        width: 100%;
+    }
+    .Skills .container-images{
+        display: none;
+    }
+    .Skills .container-Skills {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .content-Skills {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .Contact .container-images {
+        display: none;
+    }
+    .Contact .container-inputs {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    :root{
+        --padding:1.5rem;
+    }
+    html{
+        font-size: 13px; 
+    }
+    .home{
+        position: relative;
+        overflow: hidden;
+    }
+    .home .container-images{
+        display: none;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+        overflow: hidden;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul .is-active{
+        display: block;
+    }
+    nav ul li , .conbtn{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .contatiner-texts {
+        position: relative;
+        bottom: 0px;
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-top: 70px;
+    }
+    #menu{
+        display: block;
+    }
+    .About .container-images{
+        display: none;
+    }
+    .About .container-texts{
+        width: 100%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .portfolio .card{
+        width: 100%;
+    }
+    .Skills .container-images{
+        display: none;
+    }
+    .Skills .container-Skills {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .content-Skills {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .Contact .container-images {
+        display: none;
+    }
+    .Contact .container-inputs {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+    :root{
+        --padding:1.5rem;
+    }
+    html{
+        font-size: 13px; 
+    }
+    .home{
+        position: relative;
+        overflow: hidden;
+    }
+    .home .container-images{
+        width: 50%;
+    }
+    .home .container-images img {
+        position: absolute;
+        bottom: 0;
+        height: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: bottom 1s, left 1s;
+        width: 100%;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        padding-top: 0;
+        background-color: var(--bgcolor1);
+        border-bottom: 1px solid var(--bgcolor2);
+        z-index: 100;
+        overflow: hidden;
+    }
+    nav > a{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    nav ul .is-active{
+        display: block;
+    }
+    nav ul li , .conbtn{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    .contatiner-texts {
+        position: relative;
+        bottom: 0px;
+    }
+    .social{
+        margin-top: 70px;
+    }
+    h3{
+        margin-top: 70px;
+    }
+    #menu{
+        display: block;
+    }
+    /* .About .container-images{
+        display: none;
+    } */
+    .About .container-texts{
+        width: 60%;
+    }
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .portfolio .card{
+        width: 100%;
+    }
+    /* .Skills .container-images{
+        display: none;
+    } */
+    .Skills .container-Skills {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .content-Skills {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4rem;
+        align-items: center;
+        justify-content: center;
+    }
+    /* .Contact .container-images {
+        display: none;
+    } */
+    .Contact .container-inputs {
+        width: 60%;
+        align-items: center;
+    }
+}
